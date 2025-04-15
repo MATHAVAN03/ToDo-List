@@ -1,0 +1,53 @@
+<center>
+<title>ToDo List</title>
+<h1>ToDo List</h1>
+<input id="box">
+<button id="btn" onclick="add()">Add</button>
+<p id="num">
+</p>
+<p id="total">In:0</p> <p id="tot">Out:0</p>
+</center>
+<script>
+    var a=document.getElementById("box")
+var b=document.getElementById("num")
+var d=document.getElementById("total")
+var e=document.getElementById("tot")
+var i=0
+var o=0
+function add(){
+    var c=document.createElement("h2")
+    c.innerHTML=a.value+" "+"<button id='dlt' onclick='deleteitem(event)'>Delete</button>"
+    b.append(c)
+    i=i+1
+    d.textContent="In:"+i
+    alert("IN...")
+}
+function deleteitem(event){
+    event.target.parentElement.remove()
+    o=o+1
+    e.textContent="OUT:"+o
+    alert("OUT...")
+    
+}
+</script>
+<style>
+    #btn{
+  background-color: green;
+  color: white;
+  border-color: black;
+  border-style: solid;
+}
+#dlt{
+  background-color: red;
+  color: white;
+  border-color: black;
+  border-style: solid;
+}
+#total{
+  display: inline;
+}
+#tot{
+  display: inline;
+}
+
+</style>
